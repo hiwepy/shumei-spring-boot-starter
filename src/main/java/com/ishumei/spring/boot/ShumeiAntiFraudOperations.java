@@ -15,7 +15,7 @@
  */
 package com.ishumei.spring.boot;
 
-import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.*;
 import org.springframework.beans.BeanUtils;
