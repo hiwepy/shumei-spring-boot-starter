@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.ishumei.spring.boot.model.AntiFraudVideoResponse;
-import org.junit.Before;
-import org.junit.Test;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -14,6 +12,8 @@ import com.ishumei.spring.boot.model.AntiFraudResponse;
 import com.ishumei.spring.boot.model.BatchAntiFraudImageResponse;
 
 import okhttp3.OkHttpClient;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class ShumeiAntiFraudTest {
 
@@ -21,7 +21,7 @@ public class ShumeiAntiFraudTest {
 	OkHttpClient okhttp3Client = new OkHttpClient.Builder().build();
 	ShumeiAntiFraudProperties properties = new ShumeiAntiFraudProperties();
 
-	@Before
+	@BeforeEach
 	public void setup() {
 		objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
 		properties.setAccessKey("");
